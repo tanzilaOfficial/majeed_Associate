@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Projects | Majeed Associates</title>
+<meta name="description" content="Project gallery showcasing Majeed Associates construction and engineering work across Pakistan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="container-fluid px-4 px-xl-5 d-flex justify-content-between align-items-center">
+    <div class="d-flex gap-4"><span>◷ Mon - Sat 9AM - 6PM</span><span>⌕ +92 - 21-34029862 &amp; 34029863</span></div>
+    <span>in</span>
+  </div>
+</div>
+
+<header class="header solid" id="header">
+<nav class="navbar navbar-expand-lg">
+<div class="container-fluid px-4 px-xl-5">
+  <a class="brand" href="index.html"><span class="brand-logo">///</span><span>MAJEED ASSOCIATES</span></a>
+  <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav mx-auto">
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="about.html">About</a></li>
+      <li><a class="nav-link" href="services.html">Services</a></li>
+      <li><a class="nav-link active" href="projects.html">Projects</a></li>
+      <li><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+    <a class="btn red-btn" href="index.html#contact">Get Started</a>
+  </div>
+</div>
+</nav>
+</header>
+
+<section class="page-hero">
+  <div><h1>Project Gallery<span class="dot">.</span></h1><p>Home / Projects</p></div>
+</section>
+
+<main class="project-gallery-page">
+  <div class="container-fluid px-4 px-xl-5">
+    <div class="text-center mb-4">
+      <h2 class="center-title">Explore our completed projects<span class="dot">.</span></h2>
+    </div>
+    <div class="row g-3" id="projectGrid"></div>
+  </div>
+</main>
+
+<footer id="contact">
+<div class="container-fluid px-4 px-xl-5">
+<div class="row g-5">
+  <div class="col-md-4"><div class="brand"><span class="brand-logo">///</span><span>MAJEED ASSOCIATES</span></div><p class="mt-3">Premier engineering and construction company with a distinguished legacy dating back to 1987.</p></div>
+  <div class="col-md-2"><h4>Quick Links</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="index.html#contact">Contact</a></div>
+  <div class="col-md-3"><h4>Our Services</h4><a href="services.html">Structural Engineering</a><a href="services.html">Architectural Finishing</a><a href="services.html">Electrical Systems</a><a href="services.html">HVAC</a></div>
+  <div class="col-md-3"><h4>Contact Us</h4><p>⌖ Karachi, Pakistan</p><p>⌕ +92 - 21-34029862</p><p>✉ info@majeedassociates.com</p></div>
+</div>
+<div class="footer-bottom">© <span id="year"></span> Majeed Associates (Pvt.) Ltd. All rights reserved.</div>
+</div>
+</footer>
+
+<div class="modal fade" id="projectModal" tabindex="-1">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <button class="modal-close" data-bs-dismiss="modal">×</button>
+        <div id="projectCarousel" class="carousel slide" data-bs-ride="false">
+          <div class="carousel-inner"></div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="p-4"><small id="modalArea"></small><h3 id="modalTitle"></h3><p id="modalText"></p></div>
+      </div>
+    </div>
+  </div>
+</div>
+<button id="backTop" aria-label="Back to top">↑</button>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  $(function () {
+    $('#year').text(new Date().getFullYear());
+
+    const projects = [
+      {
+        area: 'Karachi',
+        name: 'Aga Khan Hospital - Faculty Office Building',
+        meta: 'Healthcare Facilities · Karachi',
+        img: 'projects/Aga khan hospital - faculty office building/Pic 1.jfif',
+        summary: 'A modern hospital support facility built with careful coordination and premium finishing standards.',
+        images: [
+          'projects/Aga khan hospital - faculty office building/Pic 1.jfif',
+          'projects/Aga khan hospital - faculty office building/Pic 2.jfif',
+          'projects/Aga khan hospital - faculty office building/Pic 3.jfif',
+          'projects/Aga khan hospital - faculty office building/Pic 4.jfif',
+          'projects/Aga khan hospital - faculty office building/Pic 5.jfif',
+          'projects/Aga khan hospital - faculty office building/Pic 6.jfif',
+          'projects/Aga khan hospital - faculty office building/Pic 7.jfif'
+        ]
+      },
+      {
+        area: 'Sukkur',
+        name: 'Chawla - Rice Mill Sukkar',
+        meta: 'Industrial Facility · Sukkur',
+        img: 'projects/Chawla - Rice Mill Sukkar/Pic 1.jfif',
+        summary: 'Industrial project tailored to operational efficiency, durability, and smooth workflow for the production environment.',
+        images: [
+          'projects/Chawla - Rice Mill Sukkar/Pic 1.jfif',
+          'projects/Chawla - Rice Mill Sukkar/Pic 2.jfif',
+          'projects/Chawla - Rice Mill Sukkar/Pic 3.jfif',
+          'projects/Chawla - Rice Mill Sukkar/Pic 4.jfif',
+          'projects/Chawla - Rice Mill Sukkar/Pic 5.jfif'
+        ]
+      },
+      {
+        area: 'Karachi',
+        name: 'HBL - BADAR Commercial Prestige Branch',
+        meta: 'Banking Branch · Karachi',
+        img: 'projects/HBL - BADAR Commercial Prestiege Branch/Pic 1.jfif',
+        summary: 'A flagship commercial banking branch with attention to premium detailing, customer experience and durable construction.',
+        images: [
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 1.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 2.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 3.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 4.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 5.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 6.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 7.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 8.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 9.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 10.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 11.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 12.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 13.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 14.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 15.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 16.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 17.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 18.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 19.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 20.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 21.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 22.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 23.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 24.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 25.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 26.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 27.jfif',
+          'projects/HBL - BADAR Commercial Prestiege Branch/Pic 28.jfif'
+        ]
+      },
+      {
+        area: 'Karachi',
+        name: 'HBL DHA Building - Karachi',
+        meta: 'Commercial Building · Karachi',
+        img: 'projects/HBL DHA building - Karachi/Pic 1.jfif',
+        summary: 'Commercial building project focused on long-term performance, functional planning and modern finishes.',
+        images: [
+          'projects/HBL DHA building - Karachi/Pic 1.jfif',
+          'projects/HBL DHA building - Karachi/Pic 2.jfif',
+          'projects/HBL DHA building - Karachi/Pic 3.jfif',
+          'projects/HBL DHA building - Karachi/Pic 4.jfif',
+          'projects/HBL DHA building - Karachi/Pic 5.jfif',
+          'projects/HBL DHA building - Karachi/Pic 6.jfif',
+          'projects/HBL DHA building - Karachi/Pic 7.jfif',
+          'projects/HBL DHA building - Karachi/Pic 8.jfif'
+        ]
+      },
+      {
+        area: 'Karachi',
+        name: 'KFC Aladin',
+        meta: 'Food & Hospitality · Karachi',
+        img: 'projects/KFC Aladin/Pic 1.jfif',
+        summary: 'Restaurant construction project with attention to customer-facing quality, layout and durable finishing.',
+        images: [
+          'projects/KFC Aladin/Pic 1.jfif',
+          'projects/KFC Aladin/Pic 2.jfif',
+          'projects/KFC Aladin/Pic 3.jfif'
+        ]
+      },
+      {
+        area: 'Karachi',
+        name: 'KFC FB Area',
+        meta: 'Food & Hospitality · Karachi',
+        img: 'projects/KFC FB Area/Pic 1.jfif',
+        summary: 'A modern quick-service restaurant project designed for efficient operations and strong visual appeal.',
+        images: [
+          'projects/KFC FB Area/Pic 1.jfif',
+          'projects/KFC FB Area/Pic 2.jfif',
+          'projects/KFC FB Area/Pic 3.jfif'
+        ]
+      },
+      {
+        area: 'Karachi',
+        name: 'Marie Stope',
+        meta: 'Retail & Commercial · Karachi',
+        img: 'projects/Marie Stope/Pic 1.jfif',
+        summary: 'Retail and commercial project executed with premium finishes and a strong focus on customer experience.',
+        images: [
+          'projects/Marie Stope/Pic 1.jfif',
+          'projects/Marie Stope/Pic 2.jfif',
+          'projects/Marie Stope/Pic 3.jfif',
+          'projects/Marie Stope/Pic 4.jfif'
+        ]
+      },
+      {
+        area: 'Karachi',
+        name: 'Moin Khan Academy - Gym Extension',
+        meta: 'Sports Facility · Karachi',
+        img: 'projects/Moin Khan Academy -- Gym Extension/Pic 1.jfif',
+        summary: 'Gym extension project focused on performance spaces, efficient planning and modern operational flow.',
+        images: [
+          'projects/Moin Khan Academy -- Gym Extension/Pic 1.jfif',
+          'projects/Moin Khan Academy -- Gym Extension/Pic 2.jfif',
+          'projects/Moin Khan Academy -- Gym Extension/Pic 3.jfif',
+          'projects/Moin Khan Academy -- Gym Extension/Pic 4.jfif',
+          'projects/Moin Khan Academy -- Gym Extension/Pic 5.jfif',
+          'projects/Moin Khan Academy -- Gym Extension/Pic 6.jfif',
+          'projects/Moin Khan Academy -- Gym Extension/Pic 7.jfif',
+          'projects/Moin Khan Academy -- Gym Extension/Pic 8.jfif',
+          'projects/Moin Khan Academy -- Gym Extension/Pic 9.jfif',
+          'projects/Moin Khan Academy -- Gym Extension/Pic 10.jfif',
+          'projects/Moin Khan Academy -- Gym Extension/Pic 11.jfif',
+          'projects/Moin Khan Academy -- Gym Extension/Pic 12.jfif',
+          'projects/Moin Khan Academy -- Gym Extension/Pic 13.jfif',
+          'projects/Moin Khan Academy -- Gym Extension/Pic 14.jfif',
+          'projects/Moin Khan Academy -- Gym Extension/Pic 15.jfif',
+          'projects/Moin Khan Academy -- Gym Extension/Pic 16.jfif',
+          'projects/Moin Khan Academy -- Gym Extension/Pic 17.jfif',
+          'projects/Moin Khan Academy -- Gym Extension/Pic 18.jfif',
+          'projects/Moin Khan Academy -- Gym Extension/Pic 19.jfif',
+          'projects/Moin Khan Academy -- Gym Extension/WhatsApp Image 2022-05-18 at 12.44.08 PM.jpeg'
+        ]
+      },
+      {
+        area: 'Karachi',
+        name: 'Pak Davis',
+        meta: 'Industrial & Commercial · Karachi',
+        img: 'projects/Pak Davis/Pic 1.jfif',
+        summary: 'Workplace and industrial project built to support productivity, usability and strong build quality.',
+        images: [
+          'projects/Pak Davis/Pic 1.jfif',
+          'projects/Pak Davis/Pic 2.jfif',
+          'projects/Pak Davis/Pic 3.jfif',
+          'projects/Pak Davis/Pic 4.jfif',
+          'projects/Pak Davis/Pic 5.jfif'
+        ]
+      },
+      {
+        area: 'Karachi',
+        name: 'UBL Theme Branch',
+        meta: 'Banking Branch · Karachi',
+        img: 'projects/UBL Theme Branch/Pic 1.jfif',
+        summary: 'Branch modernization project with detailed finishing, efficient layout and premium customer experience.',
+        images: [
+          'projects/UBL Theme Branch/Pic 1.jfif',
+          'projects/UBL Theme Branch/Pic 2.jfif',
+          'projects/UBL Theme Branch/Pic 3.jfif',
+          'projects/UBL Theme Branch/Pic 4.jfif',
+          'projects/UBL Theme Branch/Pic 5.jfif',
+          'projects/UBL Theme Branch/Pic 6.jfif',
+          'projects/UBL Theme Branch/Pic 7.jfif',
+          'projects/UBL Theme Branch/Pic 8.jfif',
+          'projects/UBL Theme Branch/Pic 9.jfif',
+          'projects/UBL Theme Branch/Pic 10.jfif',
+          'projects/UBL Theme Branch/Pic 11.jfif'
+        ]
+      },
+      {
+        area: 'Lahore',
+        name: 'ABL - EXPO LAHORE',
+        meta: 'Exhibition Facility · Lahore',
+        img: 'projects/ABL - EXPO LAHORE/Pic 1.jfif',
+        summary: 'Large-scale exhibition facility built with precision, durability and optimized for multiple event configurations.',
+        images: [
+          'projects/ABL - EXPO LAHORE/Pic 1.jfif',
+          'projects/ABL - EXPO LAHORE/Pic 2.jfif',
+          'projects/ABL - EXPO LAHORE/Pic 3.jfif',
+          'projects/ABL - EXPO LAHORE/Pic 4.jfif',
+          'projects/ABL - EXPO LAHORE/Pic 5.jfif',
+          'projects/ABL - EXPO LAHORE/Pic 6.jfif',
+          'projects/ABL - EXPO LAHORE/Pic 7.jfif',
+          'projects/ABL - EXPO LAHORE/Pic 8.jfif',
+          'projects/ABL - EXPO LAHORE/Pic 9.jfif',
+          'projects/ABL - EXPO LAHORE/Pic 10.jfif',
+          'projects/ABL - EXPO LAHORE/Pic 11.jfif',
+          'projects/ABL - EXPO LAHORE/Pic 12.jfif',
+          'projects/ABL - EXPO LAHORE/Pic 13.jfif',
+          'projects/ABL - EXPO LAHORE/Pic 14.jfif'
+        ]
+      },
+      {
+        area: 'Karachi',
+        name: 'AIP - CORPORATE OFFICE & DIE CASTING BUILDING',
+        meta: 'Industrial & Office · Karachi',
+        img: 'projects/AIP - CORPORATE OFFICE & DIE CASTING BUILDING/Pic 1.jfif',
+        summary: 'Combined office and production facility designed for operational efficiency and modern workspace standards.',
+        images: [
+          'projects/AIP - CORPORATE OFFICE & DIE CASTING BUILDING/Pic 1.jfif',
+          'projects/AIP - CORPORATE OFFICE & DIE CASTING BUILDING/Pic 2.jfif'
+        ]
+      },
+      {
+        area: 'Multan',
+        name: 'Atlas Multan Regional Building',
+        meta: 'Commercial Complex · Multan',
+        img: 'projects/Altas multan regional building/Pic 1.jfif',
+        summary: 'Regional commercial complex featuring multi-floor design, modern finishes and comprehensive facility planning.',
+        images: [
+          'projects/Altas multan regional building/Pic 1.jfif',
+          'projects/Altas multan regional building/Pic 2.jfif',
+          'projects/Altas multan regional building/Pic 3.jfif',
+          'projects/Altas multan regional building/Pic 4.jfif',
+          'projects/Altas multan regional building/Pic 5.jfif',
+          'projects/Altas multan regional building/Pic 6.jfif',
+          'projects/Altas multan regional building/Pic 7.jfif',
+          'projects/Altas multan regional building/Pic 8.jfif',
+          'projects/Altas multan regional building/Pic 9.jfif',
+          'projects/Altas multan regional building/Pic 10.jfif',
+          'projects/Altas multan regional building/Pic 11.jfif',
+          'projects/Altas multan regional building/Pic 12.jfif',
+          'projects/Altas multan regional building/Pic 13.jfif',
+          'projects/Altas multan regional building/Pic 14.jfif',
+          'projects/Altas multan regional building/Pic 15.jfif'
+        ]
+      },
+      {
+        area: 'Karachi',
+        name: 'Atlas Battery Limited',
+        meta: 'Manufacturing Facility · Karachi',
+        img: 'projects/Atlas Battery Limited/Pic 1.jfif',
+        summary: 'Manufacturing facility built to support efficient production operations and stringent industrial standards.',
+        images: [
+          'projects/Atlas Battery Limited/Pic 1.jfif'
+        ]
+      },
+      {
+        area: 'Sheikhupura',
+        name: 'Atlas Vocational Training Institute - Sheikhupura',
+        meta: 'Educational Facility · Sheikhupura',
+        img: 'projects/Atlas Vocational Training Institute - Sheikhupura/Pic 1.jfif',
+        summary: 'Vocational training institute designed with modern educational spaces, practical workshops and student amenities.',
+        images: [
+          'projects/Atlas Vocational Training Institute - Sheikhupura/Pic 1.jfif',
+          'projects/Atlas Vocational Training Institute - Sheikhupura/Pic 2.jfif',
+          'projects/Atlas Vocational Training Institute - Sheikhupura/Pic 3.jfif',
+          'projects/Atlas Vocational Training Institute - Sheikhupura/Pic 4.jfif',
+          'projects/Atlas Vocational Training Institute - Sheikhupura/Pic 5.jfif',
+          'projects/Atlas Vocational Training Institute - Sheikhupura/Pic 6.jfif',
+          'projects/Atlas Vocational Training Institute - Sheikhupura/Pic 7.jfif'
+        ]
+      },
+      {
+        area: 'Karachi',
+        name: 'Faysal Bank - Khayaban e Shaheen DHA Karachi',
+        meta: 'Banking Branch · Karachi',
+        img: 'projects/Faysal Bank - Khayaban e Shaheen DHA Karachi/Pic 1.jfif',
+        summary: 'Premium banking branch in DHA featuring contemporary design, customer-centric layout and high-quality finishes.',
+        images: [
+          'projects/Faysal Bank - Khayaban e Shaheen DHA Karachi/Pic 1.jfif',
+          'projects/Faysal Bank - Khayaban e Shaheen DHA Karachi/Pic 2.jfif',
+          'projects/Faysal Bank - Khayaban e Shaheen DHA Karachi/Pic 3.jfif',
+          'projects/Faysal Bank - Khayaban e Shaheen DHA Karachi/Pic 4.jfif',
+          'projects/Faysal Bank - Khayaban e Shaheen DHA Karachi/Pic 5.jfif'
+        ]
+      },
+      {
+        area: 'Karachi',
+        name: 'Faysal Bank - Theme Branch',
+        meta: 'Banking Branch · Karachi',
+        img: 'projects/Faysal Bank - Theme Branch/Pic 1.jfif',
+        summary: 'Thematic banking branch showcasing innovative design, premium finishes and exceptional customer experience.',
+        images: [
+          'projects/Faysal Bank - Theme Branch/Pic 1.jfif',
+          'projects/Faysal Bank - Theme Branch/Pic 2.jfif',
+          'projects/Faysal Bank - Theme Branch/Pic 3.jfif',
+          'projects/Faysal Bank - Theme Branch/Pic 4.jfif',
+          'projects/Faysal Bank - Theme Branch/Pic 5.jfif',
+          'projects/Faysal Bank - Theme Branch/Pic 6.jfif',
+          'projects/Faysal Bank - Theme Branch/Pic 7.jfif',
+          'projects/Faysal Bank - Theme Branch/Pic 8.jfif',
+          'projects/Faysal Bank - Theme Branch/Pic 9.jfif',
+          'projects/Faysal Bank - Theme Branch/Pic 10.jfif',
+          'projects/Faysal Bank - Theme Branch/Pic 11.jfif',
+          'projects/Faysal Bank - Theme Branch/Pic 12.jfif',
+          'projects/Faysal Bank - Theme Branch/Pic 13.jfif',
+          'projects/Faysal Bank - Theme Branch/Pic 14.jfif',
+          'projects/Faysal Bank - Theme Branch/Pic 15.jfif',
+          'projects/Faysal Bank - Theme Branch/Pic 16.jfif',
+          'projects/Faysal Bank - Theme Branch/Pic 17.jfif',
+          'projects/Faysal Bank - Theme Branch/Pic 18.jfif'
+        ]
+      }
+    ];
+
+    $('#projectGrid').html(projects.map((project, index) => `
+      <div class="col-12 col-md-6 col-xl-4">
+        <article class="project-card" data-index="${index}">
+          <img src="${project.img}" alt="${project.name}" loading="lazy">
+          <div class="pbody">
+            <small>${project.area.toUpperCase()}</small>
+            <h3>${project.name}</h3>
+            <p>${project.meta}</p>
+          </div>
+        </article>
+      </div>
+    `).join(''));
+
+    function openProjectCarousel(index) {
+      const project = projects[index];
+      const slides = project.images.map((image, i) => `
+        <div class="carousel-item ${i === 0 ? 'active' : ''}">
+          <img src="${image}" class="d-block w-100" alt="${project.name} photo ${i + 1}">
+        </div>
+      `).join('');
+
+      $('#projectCarousel .carousel-inner').html(slides);
+      $('#modalArea').text(project.area.toUpperCase());
+      $('#modalTitle').text(project.name);
+      $('#modalText').text(project.summary);
+
+      const carousel = new bootstrap.Carousel('#projectCarousel', { interval: false, wrap: true });
+      carousel.to(0);
+      new bootstrap.Modal('#projectModal').show();
+    }
+
+    $(document).on('click', '.project-card', function () {
+      openProjectCarousel(Number($(this).data('index')));
+    });
+
+    function sticky(){
+      if($(window).scrollTop()>70) $('#header').addClass('sticky');
+      else $('#header').removeClass('sticky');
+      $('#backTop').toggle($(window).scrollTop()>450);
+    }
+    $(window).on('scroll', sticky); sticky();
+    $('#backTop').on('click', function(){ $('html,body').animate({scrollTop:0},500); });
+  });
+</script>
+</body>
+</html>
