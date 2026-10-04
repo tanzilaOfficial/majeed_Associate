@@ -54,7 +54,7 @@
 <footer id="contact">
 <div class="container-fluid px-4 px-xl-5">
 <div class="row g-5">
-  <div class="col-md-4"><div class="brand"><span class="brand-logo brand-logo-image"><img src="assets/website_logo/majeed-logo.png" alt=""></span><span>MAJEED ASSOCIATES</span></div><p class="mt-3">Premier engineering and construction company with a distinguished legacy dating back to 1987.</p></div>
+  <div class="col-md-4"><div class=""><span class="brand-logo"><img src="assets/website_logo/logo-white.png" alt="majeed-logo"></div><p class="mt-3">Premier engineering and construction company with a distinguished legacy dating back to 1987.</p></div>
   <div class="col-md-2"><h4>Quick Links</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="index.html#contact">Contact</a></div>
   <div class="col-md-3"><h4>Our Services</h4><a href="services.html">Structural Engineering</a><a href="services.html">Architectural Finishing</a><a href="services.html">Electrical Systems</a><a href="services.html">HVAC</a></div>
   <div class="col-md-3"><h4>Contact Us</h4><p>⌖ Karachi, Pakistan</p><p>⌕ +92 - 21-34029862</p><p>✉ info@majeedassociates.com</p></div>
@@ -260,7 +260,7 @@
         area: 'Karachi',
         name: 'UBL Theme Branch',
         meta: 'Banking Branch · Karachi',
-        img: 'projects/UBL Theme Branch/Pic 1.jfif',
+        img: 'projects/UBL Theme Branch/Pic 10.jfif',
         summary: 'Branch modernization project with detailed finishing, efficient layout and premium customer experience.',
         images: [
           'projects/UBL Theme Branch/Pic 1.jfif',
@@ -314,7 +314,7 @@
         area: 'Multan',
         name: 'Atlas Multan Regional Building',
         meta: 'Commercial Complex · Multan',
-        img: 'projects/Altas multan regional building/Pic 1.jfif',
+        img: 'projects/Altas multan regional building/Pic 14.jfif',
         summary: 'Regional commercial complex featuring multi-floor design, modern finishes and comprehensive facility planning.',
         images: [
           'projects/Altas multan regional building/Pic 1.jfif',
@@ -324,7 +324,7 @@
           'projects/Altas multan regional building/Pic 5.jfif',
           'projects/Altas multan regional building/Pic 6.jfif',
           'projects/Altas multan regional building/Pic 7.jfif',
-          'projects/Altas multan regional building/Pic 8.jfif',
+          // 'projects/Altas multan regional building/Pic 8.jfif',
           'projects/Altas multan regional building/Pic 9.jfif',
           'projects/Altas multan regional building/Pic 10.jfif',
           'projects/Altas multan regional building/Pic 11.jfif',
@@ -378,7 +378,7 @@
         area: 'Karachi',
         name: 'Faysal Bank - Theme Branch',
         meta: 'Banking Branch · Karachi',
-        img: 'projects/Faysal Bank - Theme Branch/Pic 1.jfif',
+        img: 'projects/Faysal Bank - Theme Branch/Pic 5.jfif',
         summary: 'Thematic banking branch showcasing innovative design, premium finishes and exceptional customer experience.',
         images: [
           'projects/Faysal Bank - Theme Branch/Pic 1.jfif',
@@ -438,14 +438,20 @@
       openProjectCarousel(Number($(this).data('index')));
     });
 
-    function sticky(){
-      if($(window).scrollTop()>70) $('#header').addClass('sticky');
-      else $('#header').removeClass('sticky');
-      $('#backTop').toggle($(window).scrollTop()>450);
-    }
-    $(window).on('scroll', sticky); sticky();
-    $('#backTop').on('click', function(){ $('html,body').animate({scrollTop:0},500); });
-  });
+function sticky(){
+    if($(window).scrollTop()>32) $("#header").addClass("sticky");
+    else $("#header").removeClass("sticky");
+    $("#backTop").toggle($(window).scrollTop()>450);
+  }
+
+  
+  $(window).on("scroll", sticky); sticky();
+
+  $("#backTop").on("click",()=>$("html,body").animate({scrollTop:0},500));
+
+
+
+    });
 </script>
 </body>
 </html>

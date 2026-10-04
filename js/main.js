@@ -2,10 +2,12 @@ $(function(){
   $("#year").text(new Date().getFullYear());
 
   function sticky(){
-    if($(window).scrollTop()>70) $("#header").addClass("sticky");
+    if($(window).scrollTop()>32) $("#header").addClass("sticky");
     else $("#header").removeClass("sticky");
     $("#backTop").toggle($(window).scrollTop()>450);
   }
+
+  
   $(window).on("scroll", sticky); sticky();
 
   $("#backTop").on("click",()=>$("html,body").animate({scrollTop:0},500));
