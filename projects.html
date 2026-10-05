@@ -22,7 +22,7 @@
 <header class="header solid" id="header">
 <nav class="navbar navbar-expand-lg">
 <div class="container-fluid px-4 px-xl-5">
-  <a class="brand" href="index.html"><span class=""><img src="assets/website_logo/logo-white.png" alt="majeed-logo"></span></a>
+  <a class="brand" href="index.html"><span class=""><img src="assets/website_logo/logo-blue.png" alt="Majeed Associates"></span></a>
   <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
   <div class="collapse navbar-collapse" id="nav">
     <ul class="navbar-nav mx-auto">
@@ -47,7 +47,14 @@
     <div class="text-center mb-4">
       <h2 class="center-title">Explore our completed projects<span class="dot">.</span></h2>
     </div>
-    <div class="row g-3" id="projectGrid"></div>
+    <div class="filter-row project-category-filters" role="group" aria-label="Filter projects by category">
+      <button class="filter active" type="button" data-category="all" aria-pressed="true">All projects</button>
+      <button class="filter" type="button" data-category="bank" aria-pressed="false">Banks</button>
+      <button class="filter" type="button" data-category="hospital" aria-pressed="false">Hospitals</button>
+      <button class="filter" type="button" data-category="restaurant" aria-pressed="false">Restaurants</button>
+      <button class="filter" type="button" data-category="other" aria-pressed="false">Other</button>
+    </div>
+    <div class="row g-3" id="projectGrid" aria-live="polite"></div>
   </div>
 </main>
 
@@ -96,6 +103,7 @@
       {
         area: 'Karachi',
         name: 'Aga Khan Hospital - Faculty Office Building',
+        category: 'hospital',
         meta: 'Healthcare Facilities · Karachi',
         img: 'projects/Aga khan hospital - faculty office building/Pic 1.jfif',
         summary: 'A modern hospital support facility built with careful coordination and premium finishing standards.',
@@ -112,6 +120,7 @@
       {
         area: 'Sukkur',
         name: 'Chawla - Rice Mill Sukkar',
+        category: 'other',
         meta: 'Industrial Facility · Sukkur',
         img: 'projects/Chawla - Rice Mill Sukkar/Pic 1.jfif',
         summary: 'Industrial project tailored to operational efficiency, durability, and smooth workflow for the production environment.',
@@ -126,6 +135,7 @@
       {
         area: 'Karachi',
         name: 'HBL - BADAR Commercial Prestige Branch',
+        category: 'bank',
         meta: 'Banking Branch · Karachi',
         img: 'projects/HBL - BADAR Commercial Prestiege Branch/Pic29.jfif',
         summary: 'A flagship commercial banking branch with attention to premium detailing, customer experience and durable construction.',
@@ -163,6 +173,7 @@
       {
         area: 'Karachi',
         name: 'HBL DHA Building - Karachi',
+        category: 'bank',
         meta: 'Commercial Building · Karachi',
         img: 'projects/HBL DHA building - Karachi/Pic 7.jfif',
         summary: 'Commercial building project focused on long-term performance, functional planning and modern finishes.',
@@ -180,6 +191,7 @@
       {
         area: 'Karachi',
         name: 'KFC Aladin',
+        category: 'restaurant',
         meta: 'Food & Hospitality · Karachi',
         img: 'projects/KFC Aladin/Pic 1.jfif',
         summary: 'Restaurant construction project with attention to customer-facing quality, layout and durable finishing.',
@@ -192,6 +204,7 @@
       {
         area: 'Karachi',
         name: 'KFC FB Area',
+        category: 'restaurant',
         meta: 'Food & Hospitality · Karachi',
         img: 'projects/KFC FB Area/Pic 3.jfif',
         summary: 'A modern quick-service restaurant project designed for efficient operations and strong visual appeal.',
@@ -204,6 +217,7 @@
       {
         area: 'Karachi',
         name: 'Marie Stope',
+        category: 'other',
         meta: 'Retail & Commercial · Karachi',
         img: 'projects/Marie Stope/Pic 1.jfif',
         summary: 'Retail and commercial project executed with premium finishes and a strong focus on customer experience.',
@@ -217,6 +231,7 @@
       {
         area: 'Karachi',
         name: 'Moin Khan Academy - Gym Extension',
+        category: 'other',
         meta: 'Sports Facility · Karachi',
         img: 'projects/Moin Khan Academy -- Gym Extension/Pic 2.jfif',
         summary: 'Gym extension project focused on performance spaces, efficient planning and modern operational flow.',
@@ -246,6 +261,7 @@
       {
         area: 'Karachi',
         name: 'Pak Davis',
+        category: 'other',
         meta: 'Industrial & Commercial · Karachi',
         img: 'projects/Pak Davis/Pic 5.jfif',
         summary: 'Workplace and industrial project built to support productivity, usability and strong build quality.',
@@ -259,6 +275,7 @@
       {
         area: 'Karachi',
         name: 'UBL Theme Branch',
+        category: 'bank',
         meta: 'Banking Branch · Karachi',
         img: 'projects/UBL Theme Branch/Pic 10.jfif',
         summary: 'Branch modernization project with detailed finishing, efficient layout and premium customer experience.',
@@ -279,6 +296,7 @@
       {
         area: 'Lahore',
         name: 'ABL - EXPO LAHORE',
+        category: 'bank',
         meta: 'Exhibition Facility · Lahore',
         img: 'projects/ABL - EXPO LAHORE/Pic 1.jfif',
         summary: 'Large-scale exhibition facility built with precision, durability and optimized for multiple event configurations.',
@@ -302,6 +320,7 @@
       {
         area: 'Karachi',
         name: 'AIP - CORPORATE OFFICE & DIE CASTING BUILDING',
+        category: 'other',
         meta: 'Industrial & Office · Karachi',
         img: 'projects/AIP - CORPORATE OFFICE & DIE CASTING BUILDING/Pic 1.jfif',
         summary: 'Combined office and production facility designed for operational efficiency and modern workspace standards.',
@@ -313,6 +332,7 @@
       {
         area: 'Multan',
         name: 'Atlas Multan Regional Building',
+        category: 'other',
         meta: 'Commercial Complex · Multan',
         img: 'projects/Altas multan regional building/Pic 14.jfif',
         summary: 'Regional commercial complex featuring multi-floor design, modern finishes and comprehensive facility planning.',
@@ -337,6 +357,7 @@
       {
         area: 'Karachi',
         name: 'Atlas Battery Limited',
+        category: 'other',
         meta: 'Manufacturing Facility · Karachi',
         img: 'projects/Atlas Battery Limited/Pic 1.jfif',
         summary: 'Manufacturing facility built to support efficient production operations and stringent industrial standards.',
@@ -347,6 +368,7 @@
       {
         area: 'Sheikhupura',
         name: 'Atlas Vocational Training Institute - Sheikhupura',
+        category: 'other',
         meta: 'Educational Facility · Sheikhupura',
         img: 'projects/Atlas Vocational Training Institute - Sheikhupura/Pic 1.jfif',
         summary: 'Vocational training institute designed with modern educational spaces, practical workshops and student amenities.',
@@ -363,6 +385,7 @@
       {
         area: 'Karachi',
         name: 'Faysal Bank - Khayaban e Shaheen DHA Karachi',
+        category: 'bank',
         meta: 'Banking Branch · Karachi',
         img: 'projects/Faysal Bank - Khayaban e Shaheen DHA Karachi/Pic 1.jfif',
         summary: 'Premium banking branch in DHA featuring contemporary design, customer-centric layout and high-quality finishes.',
@@ -377,6 +400,7 @@
       {
         area: 'Karachi',
         name: 'Faysal Bank - Theme Branch',
+        category: 'bank',
         meta: 'Banking Branch · Karachi',
         img: 'projects/Faysal Bank - Theme Branch/Pic 5.jfif',
         summary: 'Thematic banking branch showcasing innovative design, premium finishes and exceptional customer experience.',
@@ -403,18 +427,30 @@
       }
     ];
 
-    $('#projectGrid').html(projects.map((project, index) => `
-      <div class="col-12 col-md-6 col-xl-4">
-        <article class="project-card" data-index="${index}">
-          <img src="${project.img}" alt="${project.name}" loading="lazy">
-          <div class="pbody">
-            <small>${project.area.toUpperCase()}</small>
-            <h3>${project.name}</h3>
-            <p>${project.meta}</p>
-          </div>
-        </article>
-      </div>
-    `).join(''));
+    function renderProjects(category = 'all') {
+      const visibleProjects = projects.filter(project => category === 'all' || project.category === category);
+      $('#projectGrid').html(visibleProjects.map(project => `
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="project-card" data-index="${projects.indexOf(project)}">
+            <img src="${project.img}" alt="${project.name}" loading="lazy">
+            <div class="pbody">
+              <small>${project.area.toUpperCase()}</small>
+              <h3>${project.name}</h3>
+              <p>${project.meta}</p>
+            </div>
+          </article>
+        </div>
+      `).join(''));
+    }
+
+    renderProjects();
+
+    $('.project-category-filters .filter').on('click', function () {
+      const category = $(this).data('category');
+      $('.project-category-filters .filter').removeClass('active').attr('aria-pressed', 'false');
+      $(this).addClass('active').attr('aria-pressed', 'true');
+      renderProjects(category);
+    });
 
     function openProjectCarousel(index) {
       const project = projects[index];
