@@ -29,7 +29,13 @@
       <li><a class="nav-link" href="index.html">Home</a></li>
       <li><a class="nav-link" href="about.html">About</a></li>
       <li><a class="nav-link" href="services.html">Services</a></li>
-      <li><a class="nav-link active" href="projects.html">Projects</a></li>
+      <li class="nav-item dropdown project-nav-dropdown">
+        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects<span class="project-dropdown-caret" aria-hidden="true"></span></a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="current-projects.html">Current Projects</a></li>
+          <li><a class="dropdown-item active" href="projects.html" aria-current="page">Completed Projects</a></li>
+        </ul>
+      </li>
       <li><a class="nav-link" href="contact.html">Contact</a></li>
     </ul>
     <a class="btn red-btn" href="index.html#contact">Get Started</a>

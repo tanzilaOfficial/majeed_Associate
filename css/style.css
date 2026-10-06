@@ -6,6 +6,21 @@
 }
 
 .project-category-filters{flex-wrap:wrap}
+.project-nav-dropdown{position:relative}
+.project-dropdown-caret{display:inline-block;width:7px;height:7px;margin:0 0 4px 8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);transition:transform .2s ease;vertical-align:middle}
+.project-nav-dropdown .dropdown-toggle[aria-expanded="true"] .project-dropdown-caret{margin-bottom:0;transform:rotate(225deg)}
+.project-nav-dropdown .dropdown-toggle:after{left:16px;right:16px;border:0;margin:0}
+.project-nav-dropdown .dropdown-menu{min-width:210px;padding:7px 0;border:1px solid var(--line);border-radius:0;box-shadow:0 12px 28px rgba(20,33,49,.14)}
+.project-nav-dropdown .dropdown-item{padding:9px 16px;color:var(--ink);font-size:13px;font-weight:600}
+.project-nav-dropdown .dropdown-item:hover,.project-nav-dropdown .dropdown-item:focus,.project-nav-dropdown .dropdown-item.active{background:var(--soft);color:var(--red)}
+.project-nav-dropdown .dropdown-item.active{font-weight:800}
+.current-projects-page{min-height:390px;padding:72px 0}
+.current-projects-message{max-width:720px;margin:0 auto;text-align:center}
+.current-projects-message .eyebrow{color:var(--red);margin-bottom:12px}
+.current-projects-message h2{font-size:32px;line-height:1.2;margin:0 0 14px}
+.current-projects-message p{max-width:580px;margin:0 auto 24px;color:var(--muted)}
+@media(max-width:991px){.project-nav-dropdown .dropdown-menu{border:0;box-shadow:none;padding:0 0 8px 12px}.project-nav-dropdown .dropdown-item{padding:8px 12px}.project-nav-dropdown .dropdown-toggle:after{left:0;right:auto}}
+@media(max-width:767px){.current-projects-page{min-height:340px;padding:52px 0}.current-projects-message h2{font-size:25px}}
 
 .team.section-pad{padding:68px 0}
 .team .team-heading .eyebrow{margin-bottom:6px}
